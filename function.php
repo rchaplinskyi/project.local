@@ -27,3 +27,12 @@ function get_news_by_id($post_id) {
         $post = mysqli_fetch_assoc($result);
         return $post;
 }
+//отримання категорії новини
+function get_new_by_category($category_id) {
+        global $conn;
+        $sql = "SELECT * FROM news WHERE menu_id=".$category_id;
+
+        $result = mysqli_query($conn, $sql);
+        $new = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        return $new;
+}
