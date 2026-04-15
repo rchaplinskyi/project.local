@@ -25,7 +25,7 @@
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <?php $menus = get_menu();?>
                 <?php foreach ($menus as $menu):?>
-                <li class="nav-item"><a class="nav-link" href="#"><?=$menu['title']?></a></li>
+                <li class="nav-item"><a class="nav-link" href="category.php?category_id=<?=$menu['id']?>"><?=$menu['title']?></a></li>
                 <?php endforeach;?>
             </ul>
         </div>
