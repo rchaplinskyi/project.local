@@ -1,0 +1,29 @@
+
+<?php
+include_once ('conf.php');
+//отримання пунктів меню
+    function get_menu () {
+        global $conn;
+        $sql = "SELECT * FROM menu";
+
+        $result = mysqli_query($conn, $sql);
+        $menus = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        return $menus;
+    }
+// отримання списку новин
+function get_news() {
+     global $conn;
+     $sql = "SELECT * FROM news";
+     $result = mysqli_query($conn, $sql);
+
+     $news = mysqli_fetch_all($result, MYSQLI_ASSOC);
+     return $news;
+}
+// отримання окремої новини
+function get_news_by_id($post_id) {
+        global $conn;
+        $sql = "SELECT * FROM news WHERE id =" .$post_id;
+        $result = mysqli_query($conn, $sql);
+        $post = mysqli_fetch_assoc($result);
+        return $post;
+}
