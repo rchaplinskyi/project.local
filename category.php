@@ -8,7 +8,10 @@
                 <?php
                     $category_id = $_GET['category_id'];
                     $new = get_new_by_category($category_id);
+                    $category = get_category_title($category_id);
                     ?>
+                <h2 class="mt-4"><?=$category['title']?></h2>
+                <hr>
                 <?php foreach ($new as $item):?>
                 <div class="card-body mt-4">
                     <img class="card-img-top" src="<?=$item['image']?>" alt="..." />

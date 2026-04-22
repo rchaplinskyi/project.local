@@ -30,9 +30,19 @@ function get_news_by_id($post_id) {
 //отримання категорії новини
 function get_new_by_category($category_id) {
         global $conn;
+        $category_id = mysqli_real_escape_string($conn, $category_id);
         $sql = "SELECT * FROM news WHERE menu_id=".$category_id;
 
         $result = mysqli_query($conn, $sql);
         $new = mysqli_fetch_all($result, MYSQLI_ASSOC);
         return $new;
+}
+// отримання назви категорії
+function get_category_title($category_id) {
+        global $conn;
+        $category_id = mysqli_real_escape_string($conn, $category_id);
+        $sql = "SELECT * FROM menu WHERE id=".$category_id;
+        $result = mysqli_query($conn, $sql);
+        $category = mysqli_fetch_assoc($result);
+        return $category;
 }
