@@ -1,5 +1,13 @@
 <?php
     include_once ('../function.php');
+    session_start();
+    $login = 'admin';
+    $password = '12345';
+   if ($_SESSION['login'] !== $login && $_SESSION['password'] !== $password) {
+       header('location: ../login/index.php');
+   }
+
+
 ?>
 <!doctype html>
 <html lang="uk">
@@ -49,7 +57,7 @@
                 <?php endforeach;?>
                 </tbody>
             </table>
-            <a class="btn btn-success" href="#">Додани новий запис</a>
+            <a class="btn btn-success" href="add-new.php">Додани новий запис</a>
         </div>
     </section>
 </body>
