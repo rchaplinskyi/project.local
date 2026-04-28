@@ -7,12 +7,14 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Вхід в адмін-панель</title>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <div class="div-6">
-                <form class="align-baseline"" action="" method="post">
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <h3>Форма входу у адмін-панель</h3>
+                <form  action="check-login.php" method="post">
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Введіть ваш логі</label>
                         <input type="text" name="login" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">

@@ -27,7 +27,7 @@
                 <?php foreach ($menus as $menu):?>
                 <li class="nav-item"><a class="nav-link" href="category.php?category_id=<?=$menu['id']?>"><?=$menu['title']?></a></li>
                 <?php endforeach;?>
-                li class="nav-item"><a class="nav-link" href="admin/index.php">Адмінка</a></li>
+                li class="nav-item"><a class="nav-link" href="login/index.php">Адмінка</a></li>
             </ul>
         </div>
     </div>
