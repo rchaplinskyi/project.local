@@ -24,7 +24,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Введіть текст новини</label><br>
-                        <textarea name="content" rows="8"></textarea>
+                        <textarea name="content" style="width: 100%; box-sizing: border-box; resize: vertical; min-height: 150px;"></textarea>
                     </div>
                     <div class="mb-3">
                         <label class="form-check-label" for="exampleCheck1">Завантажте зображення</label>

@@ -51,7 +51,7 @@
                 <tr>
                     <th scope="row"><?=$new['id']?></th>
                     <td><?=$new['title']?></td>
-                    <td><a  class="btn btn-warning" href="#">Редагувати</a></td>
+                    <td><a  class="btn btn-warning" href="edit-new.php?post_id=<?=$new['id']?>">Редагувати</a></td>
                     <td><a  class="btn btn-danger" href="#">Видалити</a></td>
                 </tr>
                 <?php endforeach;?>
