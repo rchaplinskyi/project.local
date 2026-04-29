@@ -46,3 +46,12 @@ function get_category_title($category_id) {
         $category = mysqli_fetch_assoc($result);
         return $category;
 }
+// видалення новини
+function delete_new($new_id) {
+        global $conn;
+        $new_id = mysqli_real_escape_string($conn, $new_id);
+
+        $sql = "DELETE FROM news WHERE id =" .$new_id;
+        $result = mysqli_query($conn, $sql);
+
+}

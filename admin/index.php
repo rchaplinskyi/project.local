@@ -52,7 +52,7 @@
                     <th scope="row"><?=$new['id']?></th>
                     <td><?=$new['title']?></td>
                     <td><a  class="btn btn-warning" href="edit-new.php?post_id=<?=$new['id']?>">Редагувати</a></td>
-                    <td><a  class="btn btn-danger" href="#">Видалити</a></td>
+                    <td><a  class="btn btn-danger" href="delete-new.php?new_id=<?=$new['id']?>">Видалити</a></td>
                 </tr>
                 <?php endforeach;?>
                 </tbody>
