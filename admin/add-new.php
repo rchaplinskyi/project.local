@@ -1,4 +1,6 @@
 <?php
+ include_once ('../function.php');
+ include_once ('../conf.php');
 ?>
 <!doctype html>
 <html lang="uk">
@@ -24,17 +26,26 @@
                         <label for="exampleInputPassword1" class="form-label">Введіть текст новини</label><br>
                         <textarea name="content" rows="8"></textarea>
                     </div>
-                    <div class="mb-3 form-check">
+                    <div class="mb-3">
                         <label class="form-check-label" for="exampleCheck1">Завантажте зображення</label>
                         <input type="file" name="image" class="form-control-file"   >
                     </div>
-                    <div class="mb-3 form-check">
+                    <div class="mb-3">
                         <label class="form-label" for="exampleCheck1">Дата публікації</label>
                         <input type="date" name="date" class="form-control">
                     </div>
-                    <div class="mb-3 form-check">
+                    <?php $menus = get_menu();?>
+                    <div class="mb-3">
                         <label class="form-label" for="exampleCheck1">Категорія новини</label>
-                        <input type="text" name="menu_id" class="form-control">
+                        <select name="menu_id" required>
+                            <option value="">-- Оберіть категорію --</option>
+                            <?php foreach ($menus as $menu): ?>
+                                <!-- value містить id для БД, а між тегами - назва для користувача -->
+                                <option value="<?= htmlspecialchars($menu['id']) ?>">
+                                    <?= htmlspecialchars($menu['title']) ?>
+                                </option>
+                            <?php endforeach; ?>
+                        </select>
                     </div>
                     <button type="submit" class="btn btn-primary">Додати новину</button>
                 </form>

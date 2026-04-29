@@ -9,7 +9,7 @@
     else {
         $img = '../assets/no-image.jpg';
     }
-    $sql = "INSERT INTO news (title, content, image, datetime,menu_id)
+    $sql = "INSERT INTO news (title, content, image, datetime, menu_id)
             VALUES (:title, :content, :image, :date, :menu_id)";
     $stmt = $db->prepare($sql);
     $stmt ->bindValue(":title", $_POST['title']);
